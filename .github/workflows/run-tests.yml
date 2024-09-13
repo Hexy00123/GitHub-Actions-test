@@ -24,6 +24,7 @@ jobs:
 
   test-functionallity:
     runs-on: ubuntu-latest
+    needs: [test-codestyle]
 
     steps:
     - name: Checkout code
