@@ -4,13 +4,13 @@ on: [push]
 
 jobs: 
   Explore-GH-actions: 
-    runs-pn: ubuntu-latest
+    runs-on: ubuntu-latest
     steps: 
-      - run: echo "User: $USER"
-      - run: echo "OS: ${{ runner.os }}" 
-      - run: echo "Trigger: ${{ github.event_name }}"
-      - run: echo "Repo: ${{ github.repository }}"
+      - run: echo "User - $USER"
+      - run: echo "OS - ${{ runner.os }}" 
+      - run: echo "Trigger - ${{ github.event_name }}"
+      - run: echo "Repo - ${{ github.repository }}"
       - name: List files
-      - run: |
+        run: |
           ls ${{ github.workspace }}
-      - run: echo "Job status: ${{ job.status }}" 
+      - run: echo "Job status - ${{ job.status }}" 
